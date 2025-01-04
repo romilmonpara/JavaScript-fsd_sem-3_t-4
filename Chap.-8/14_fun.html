@@ -1,0 +1,21 @@
+<!-- Function without args -->
+
+<html>
+    <head>
+        <script>
+            function demo(){
+                document.write("Hello, World!");
+            }
+
+            function info(name, age) {
+                document.write("Name: " + name + ", Age: " + age + " years");
+                alert("With Args!!")
+            }
+
+        </script>        
+    </head>
+    <body>
+        <input type="button" onclick="demo()" value="Say hello"/>
+        <input type="button" onclick="info('abc', 12)" value="Get info !!">
+    </body>
+</html>
