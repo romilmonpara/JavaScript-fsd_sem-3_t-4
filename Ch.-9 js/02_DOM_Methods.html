@@ -1,0 +1,38 @@
+<!-- DOM Methods 
+ 1. getElementById()
+ 2. getElementsTagName()
+ 3. getElementClassName()
+ 4. write()
+  -->
+<!-- Property
+        (inner text of element)
+ 1. element.innerHTML = new value
+ e.g. |      |           /
+    C1[i].innerHTML = "hello"
+
+        (change in style)
+ 2. element.style.property = new value
+ eg.
+    c1[i].style.fontSize = "50px"
+
+        (change attribute)
+ 3. element.attribute = new value              
+ e.g.                                       <--- \
+    c1[i].bgColor = "red"                         \
+                                                   \----- Alter Method
+ 4. element.setAttribute(attribute, Value)         /
+ e.g.                                       <---  /
+    c1[i].setAttribute("bgColor", "red")         /
+
+  -->
+
+<html>
+    <body id="b">
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = "Hello";
+            b.setAttribute("bgcolor", 'red')
+        </script>
+    </body>
+</html>

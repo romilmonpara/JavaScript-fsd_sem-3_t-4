@@ -1,0 +1,23 @@
+<!-- [x|y] Find any of the alternatives specified
+
+-->
+
+<html>
+    <head>
+        <script>
+            function fun(){
+                pat = /[x|y]/i;
+                u = document.getElementById("t1").value;
+                if (pat.test(u)) {
+                    alert("Perfect Match")
+                } else {
+                    alert("Incorrect Match")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="t1"/>
+        <input type="submit" value="Submit" onclick="fun()">
+    </body>
+</html>

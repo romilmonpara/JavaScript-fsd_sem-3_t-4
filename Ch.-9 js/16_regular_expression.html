@@ -1,0 +1,35 @@
+<!-- Regular Expression(RE)
+ -> Validation :
+    1. Method
+    2. Modifier
+    3. Brackets
+    4. Meta char
+
+ -> Syntex :
+    var name = /pattern/;
+
+ -> Method :
+       test()
+        /  \
+     true  false
+-->
+
+<html>
+    <head>
+        <script>
+            function fun(){
+                pat = /abc/;
+                u = document.getElementById("t1").value;
+                if (pat.test(u)) {
+                    alert("Perfect Match")
+                } else {
+                    alert("Incorrect Match")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="t1"/>
+        <input type="submit" value="Submit" onclick="fun()">
+    </body>
+</html>

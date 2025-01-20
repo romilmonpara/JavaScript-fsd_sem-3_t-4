@@ -1,0 +1,58 @@
+<!-- Write a JavaScript that handles following mouse events. Add necessary
+elements.
+(i)If the mouse is over the heading, heading should change its text and color
+red and if the mouse goes out of the heading the text should return with
+same text as before and color should turn black.
+(ii) If mouse button is pressed, background color should be black. If mouse
+button is released up, background color should be cyan -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+    <style>
+        /* Default heading styles */
+        h1 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading -->
+    <h1 id="heading">Hover over me!</h1>
+
+    <script>
+        // Get the heading element
+        const heading = document.getElementById('heading');
+
+        // Store the original text for later use
+        const originalText = heading.innerText;
+
+        // Handle mouse over the heading
+        heading.addEventListener('mouseover', () => {
+            heading.innerText = 'Mouse is over me!';
+            heading.style.color = 'red';
+        });
+
+        // Handle mouse out of the heading
+        heading.addEventListener('mouseout', () => {
+            heading.innerText = originalText;
+            heading.style.color = 'black';
+        });
+
+        // Handle mouse button press
+        window.addEventListener('mousedown', () => {
+            document.body.style.backgroundColor = 'black';
+        });
+
+        // Handle mouse button release
+        window.addEventListener('mouseup', () => {
+            document.body.style.backgroundColor = 'cyan';
+        });
+    </script>
+
+</body>
+</html>

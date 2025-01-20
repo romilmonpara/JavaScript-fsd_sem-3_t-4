@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function fun(){
+                c1 = document.getElementsByTagName("p");
+                for(i=0; i<c1.length; i++){
+                c1[i].innerHTML = "changeText";
+                c1[i].style.color = "red";
+                c1[i].style.backgroundColor = "blue";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>P1 Tag</p>
+        <p>P2 Tag</p>
+        <p>P3 Tag</p>
+
+        <input type="button" onclick="fun()" value="Click"/>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!-- mouse events
+ 1. if mouse is over heading should turn yellow color if goes out then it  should turn black color 
+ 2. if findtime button is clicked then show date & time information
+ 3. if btn named pink is clicked then bgcolor should turn pink and button name green is cliked the bgcolor should turn green -->
+
+<html>
+    <head>
+        <script>
+            function fun(id){
+                id.style.color="yellow"
+            }
+            function fun1(id){
+                id.style.color="black"
+            }
+
+            function findt(){
+                d = new Date();
+                document.getElementById("demo").innerHTML = d
+            }
+
+            function pink_c(){
+                b.setAttribute("bgcolor", 'pink')
+            }
+            function green_c(id){
+                id.style.backgroundColor = "green"
+            }
+        </script>
+    </head>
+    <body id="b">
+        <div onmouseover="fun(this)" onmouseout="fun1(this)">
+            <h1>Heading</h1>
+        </div>
+
+        <p id="demo">
+
+        </p>
+        <input type="button" onclick="findt()" value="Find Time">
+        <input type="button" onclick="pink_c()" value="Pink">
+        <input type="button" onclick="green_c(b)" value="Green">
+    </body>
+</html>

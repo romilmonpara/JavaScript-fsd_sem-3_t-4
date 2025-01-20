@@ -1,0 +1,27 @@
+<!-- Write a js to handle following mouse events if mouse clicked on heading , content of heading change to hello students with italic effect and 50px size
+ 2. if button name red is click then heading should change to red color and btn name blue is clicked then heading should change into blue color. -->
+
+<html lang="en">
+    <head>
+        <script>
+            function fun(id) {
+                id.innerHTML="hello student"
+                id.style.fontStyle="italic"
+                id.style.fontSize="50px"
+            }
+        
+            function fun1() {
+                document.getElementsByTagName("h1")[0].style.color="red"
+            }
+            function fun2() {
+                document.getElementsByTagName("h1")[0].style.color="blue"
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onclick="fun(this)">Heading</h1>
+        
+        <input type="button" onclick="fun1()" value="red">
+        <input type="button" onclick="fun2()" value="blue">
+    </body>
+</html>
