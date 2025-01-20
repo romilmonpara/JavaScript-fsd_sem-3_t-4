@@ -1,0 +1,24 @@
+<!-- ES6
+ Variable :
+ 1. Using var
+ 2. Using let
+ 3. Using Const 
+-->
+
+<html>
+    <head>
+        <script>
+            function fun() {
+                var a = 10;
+                if(a>0){
+                    var a = 100;
+                    document.write("A inside : " + a + "<br>");
+                }
+                document.write("A outside : " + a + "<br>");
+            }
+        </script>
+    </head>
+    <body>
+        <input type="submit" onclick="fun()"/>
+    </body>
+</html>

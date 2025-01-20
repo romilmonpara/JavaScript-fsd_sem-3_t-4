@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <script>
+            function f() {
+                var args = Array.prototype.slice.call(arguments); // Convert arguments to an array
+                console.log(args);
+            }
+            f(1, 2, 3, 4, 5);
+        </script>
+    </body>
+</html>

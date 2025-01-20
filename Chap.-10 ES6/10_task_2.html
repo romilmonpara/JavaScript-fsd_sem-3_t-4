@@ -1,0 +1,47 @@
+<!-- Write a Js or html to add a heading, and image and a button initially display hello world text as a heading and add a image "img.png" without any decoration a function to be called on button click task below.
+ 1. pass 3 default parameters for font size, font color and text
+ 2. the text parameter must be passed as a default parameter with 'good morning' value 
+ 3. Another 2 parameters font size && font color must be passed as args while calling the function on button click
+ 4. Also change img to 'img2.png' by clicking on button
+ --> 
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dynamic Content Update</title>
+     <style>
+         #heading {
+             font-size: 16px;
+             color: black;
+             text-align: center;
+         }
+         #image {
+             display: block;
+             margin: 20px auto;
+             max-width: 300px;
+         }
+     </style>
+ </head>
+ <body>
+     <h1 id="heading">Hello World</h1>
+     <img id="image" src="1_watch.webp" alt="Image">
+     <button onclick="updateContent('24px', 'blue')">Click Me</button>
+ 
+     <script>
+         function updateContent(fontSize = "16px", fontColor = "black", text = "Good Morning") {
+             // Update heading text, font size, and color
+             const heading = document.getElementById("heading");
+             heading.style.fontSize = fontSize;
+             heading.style.color = fontColor;
+             heading.textContent = text;
+ 
+             // Update the image
+             const image = document.getElementById("image");
+             image.src = "2_rolex.webp";
+         }
+     </script>
+ </body>
+ </html>
+ 
