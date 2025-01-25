@@ -1,0 +1,21 @@
+<!-- accepts all digits
+ a12 : true -->
+<html>
+    <head>
+        <script>
+            function fun(){
+                pat = /[0-9]/;
+                u = document.getElementById("t1").value;
+                if (pat.test(u)) {
+                    alert("Perfect Match")
+                } else {
+                    alert("Incorrect Match")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="t1"/>
+        <input type="submit" value="Submit" onclick="fun()">
+    </body>
+</html>

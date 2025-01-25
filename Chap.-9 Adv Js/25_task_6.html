@@ -1,0 +1,24 @@
+<!-- Example: Write HTML form accepting an integer having four digits. Input should not 
+accept characters of letters and special symbols. -->
+<html>
+  <head>
+    <script>
+      function fun() {
+        pat = /^\d+$/;
+        u = document.getElementById("t1").value;
+        if (u.length != 4) {
+          alert("username must be of 4 chars");
+        }
+        if (!pat.test(u)) {
+          alert("username must not contain chars");
+        } else{
+            alert("username is valid");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    NAME <input type="text" id="t1" />
+    <input type="submit" onclick="fun()" />
+  </body>
+</html>

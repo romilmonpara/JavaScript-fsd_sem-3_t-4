@@ -1,0 +1,51 @@
+<!-- 587. Write a js that handles form events
+ 1. If the field is in focus change is bgcolor to red
+ 2. change texts to lower case only when the value of the field onchange-onfocus
+  -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event Handling</title>
+    <style>
+      input {
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+  
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+  </form>
+  
+  <script>
+    // Get the input field
+    const nameField = document.getElementById('name');
+  
+    // Event handler for focus event
+    nameField.addEventListener('focus', function() {
+      nameField.style.backgroundColor = 'red';
+      // Convert the text to lowercase
+      nameField.value = nameField.value.toLowerCase();
+    });
+  
+    // Event handler for blur event (when the field loses focus)
+    nameField.addEventListener('blur', function() {
+      nameField.style.backgroundColor = ''; // reset background color
+    });
+  
+    // Event handler for change event
+    nameField.addEventListener('input', function() {
+      // Convert text to lowercase as the user types or changes value
+      nameField.value = nameField.value.toLowerCase();
+    });
+  </script>
+  
+  </body>
+  </html>
+  

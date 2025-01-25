@@ -1,0 +1,68 @@
+<!-- Example: Show validation using JS on fields like name, phone number and email id
+RE for Username: /^[A-z]+$/;
+RE for Phone number: /^\d{10}$/;
+RE for email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+</head>
+<body>
+  <form id="validationForm">
+    <label for="username">Username (letters only):</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+
+    <label for="phone">Phone Number (10 digits):</label>
+    <input type="text" id="phone" name="phone" required>
+    <br><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Regular expressions for validation
+    const usernameRegex = /^[A-z]+$/;
+    const phoneRegex = /^\d{10}$/;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    // Form validation logic
+    document.getElementById('validationForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get input values
+      username = document.getElementById('username').value;
+      phone = document.getElementById('phone').value;
+      email = document.getElementById('email').value;
+
+      // Validate username
+      if (!usernameRegex.test(username)) {
+        alert('Username should only contain letters.');
+        return;
+      }
+
+      // Validate phone number
+      else if (!phoneRegex.test(phone)) {
+        alert('Phone number should be exactly 10 digits.');
+        return;
+      }
+
+      // Validate email
+      else if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      // If all validations pass
+      alert('Form submitted successfully!');
+    });
+  </script>
+</body>
+</html>
