@@ -1,0 +1,35 @@
+<!-- Write an ES6 function using rest parameter to recieve first natural 10 numbers compute addition all odd and even number using for_of loop -->
+
+<html>
+    <script>
+        function sumEvenOdd(...numbers) {
+            let sumEven = 0;
+            let sumOdd = 0;
+
+            for (const num of numbers) {
+                if (num % 2 === 0) {
+                    sumEven += num;
+                } else {
+                    sumOdd += num;
+                }
+            }
+
+            return {
+                sumEven,
+                sumOdd
+            };
+        }
+
+        const firstNaturalNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const result = sumEvenOdd(...firstNaturalNumbers);
+
+        console.log(`Sum of even numbers: ${result.sumEven}`);
+        console.log(`Sum of odd numbers: ${result.sumOdd}`);
+    </script>
+</html>
+
+<!-- Output :
+
+Sum of even numbers: 30
+Sum of odd numbers: 25 
+-->

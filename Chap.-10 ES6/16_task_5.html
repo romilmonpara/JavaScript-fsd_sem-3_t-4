@@ -1,0 +1,31 @@
+<!-- Write ES6 Script to find parimeter and area of traingle and rectangle using set arrow fun and also pass default parameter of rectangle and tringle -->
+
+<html>
+    <script>
+        // Function to calculate the perimeter and area of a rectangle
+        const rectangle = (length = 5, width = 3) => {
+            const perimeter = 2 * (length + width);
+            const area = length * width;
+            return { perimeter, area };
+        };
+
+        // Function to calculate the perimeter and area of a triangle
+        const triangle = (a = 3, b = 4, c = 5) => {
+            const perimeter = a + b + c;
+            const s = perimeter / 2; // semi-perimeter
+            const area = Math.sqrt(s * (s - a) * (s - b) * (s - c)); // Heron's formula
+            return { perimeter, area };
+        };
+
+        const rectResult = rectangle();
+        const triResult = triangle();
+
+        console.log(`Rectangle - Perimeter: ${rectResult.perimeter}, Area: ${rectResult.area}`);
+        console.log(`Triangle - Perimeter: ${triResult.perimeter}, Area: ${triResult.area}`);
+    </script>
+</html>
+
+<!-- Output :
+Rectangle - Perimeter: 16, Area: 15
+Triangle - Perimeter: 12, Area: 6 
+-->
